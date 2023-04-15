@@ -29,7 +29,7 @@ function seleccionarMascotaJugador(){
     sectioSeleccionarMascota.style.display = 'none'
 
     let sectioSeleccionarAtaque = document.getElementById('seleccionar-ataque')
-    sectioSeleccionarAtaque.style.display = 'block'
+    sectioSeleccionarAtaque.style.display = 'flex'
 
     let inputHipodoge = document.getElementById('hipodoge')
     let inputCapipepo = document.getElementById('capipepo')
@@ -121,26 +121,31 @@ function revisarVidas() {
     if (vidasEnemigo == 0){
         crearMensajeFinal("¡FELICITACIONES! Ganaste :)")
     }else if (vidasJugador == 0) {
-        crearMensajeFinal("Lo siento, perdiste :(")
+        crearMensajeFinal("Lo siento, vuelve a intentarlo :(")
     }
 }
 
 function crearMensaje(resultado) {
-let sectionMensajes = document.getElementById('mensajes')
+    let sectionMensajes = document.getElementById('resultado')
+    let ataquesDelJugador = document.getElementById('ataques-del-jugador')
+    let ataquesDelEnemigo = document.getElementById('ataques-del-enemigo')
 
-    let parrafo = document.createElement('p')
-    parrafo.innerHTML = 'Tu mascota atacó con ' + ataqueJugador + ', la mascota del enemigo atacó con '+ ataqueEnemigo + ' - ' + resultado
+    let nuevoAtaqueDelJugador = document.createElement('p')
+    let nuevoAtaqueDelEnemigo = document.createElement('p')
 
-    sectionMensajes.appendChild(parrafo)
+
+    sectionMensajes.innerHTML = resultado
+    nuevoAtaqueDelJugador.innerHTML = ataqueJugador
+    nuevoAtaqueDelEnemigo.innerHTML = ataqueEnemigo
+
+    ataquesDelJugador.appendChild(nuevoAtaqueDelJugador)
+    ataquesDelEnemigo.appendChild(nuevoAtaqueDelEnemigo)
 }
 
 function crearMensajeFinal(resultadoFinal) {
-    let sectionMensajes = document.getElementById('mensajes')
+    let sectionMensajes = document.getElementById('resultado')
     
-        let parrafo = document.createElement('p')
-        parrafo.innerHTML = resultadoFinal
-    
-        sectionMensajes.appendChild(parrafo)
+        sectionMensajes.innerHTML = resultadoFinal
 
         let botonFuego = document.getElementById('boton-fuego')
         botonFuego.disabled = true

@@ -427,3 +427,170 @@ Dividiremos las secciones para que se muestre y oculten, segú como avance el ju
 Propiedad (style.display) = Modificar los estilo en html desde JS
 
 Colocamos el estilo none para que no se muestre y luego block cuando queremos que esté
+
+Clase - 32
+
+CSS trabaja de la mano con HTML, se crea un vinculo entre el archivo de css y html, este vinculo es conocido como "SELECTOR"  
+
+Tipos de Selectores;
+
+	* Tipo = Es el mismo nombre de la etiqueta que se encuentra en html
+	* Clase = Este atritbuto sirve para poder seleccionar diferentes etiquetas, sin importar su diferencia y darles el mismo estilo
+	* id = Este selector funciona igual que el de clase, pero no se usa tan frecuente.
+
+ Para poder funcionar el selector que escojamos, debemos usar las llaves = '{ - }' para determinar los estilos que estos ocuparán.
+
+	* Propiedades = Caracteristicas que le podemos dar a esos elementos de html (color, tamaño)
+	* Valores = Corresponde a cada una de esas caracteristicas 
+
+	
+			>	Propiedad =  Rojo   		Caracteristica = Color
+			> 	Propiedad = 10 px			Caracteristica = Tamaño
+
+* Cuando usamos el selector de tipo Clase, lo debemos llamar en la hoja de estilos por el nombre de la clase que le hayamos puesto y le sumamos un punto '.' antes de la palabra, todo pegado
+
+Si llamamos dos selectores a una misma etiqueta, no deberían tener un mismo nombre.
+
+* Cuando usamos el selector de tipo Id, lo debemos llamar en la hoja de estilos por el nombre de que le hayamos puesto y le sumamon un númeral '#' antes de la palabra, todo pegado.
+
+
+Las propiedades y valores, en su uso están escritas en inglés
+
+
+		* (cssreference.io) = página que podremos ver los atributos que podemos encontrar y usar en CSS
+
+		* (htmlcolorcodes.com) = página web que sirve para ver todos los códigos de color que podremos usar
+
+
+
+
+
+Clase - 33
+
+Tipos de visualización/ tipos de display = 
+
+	* inline		=	Solo ocupa una parte de la pantalla
+	* block		=	Ocupan toda la pantalla de izquierda a derecha
+	*inline-block	=
+
+
+Clase - 34
+
+	flexbox = atributo para alinear elementos y acomodarlos en la web
+	* Podemos ubicar elementos en la web como queramos
+
+Contenedores > Elementos
+
+Guía para el uso de CSS - flexbox = (css-tricks.com)
+
+valores y caracteristicas usados=
+						(display = flex)
+						(flex-direction = column)
+						(justify-content = center)
+						(align-items = center)
+
+
+
+
+Clase - 35
+
+El modelo de caja nos permite editar, diseñar y asignar el contenido dentro y fuera de ella
+
+	> Margin
+		> Border 
+			> Padding
+				> Content
+
+* El content se verá afectado si añadimos un padding y un border, el padding aumentará el tamaño de nuestra caja
+ 
+	(box-sizing = border-box) == hace que el content no se vea afectado por el padding que usemos
+
+Cuando usamos el margin no afecta nuestra caja y su contenido, sino su exterior
+
+El tamaño de nuestro conten, se ve afectado el tamaño, al sumarse el tamaño del padding y el border
+
+
+
+Clase - 36
+
+Herramienta para el diseño Web = 
+
+*Pinterest
+	Busco de ideas de diseño, ilustración web
+
+*colorhunt.co
+	Diseño y paleta de colores para css
+
+*google fonts
+	Fuentes de cualquier estilo para nuestr página
+
+
+
+Clase - 37
+
+Se añadieron estilos al botón y se vió las diferentes tipos de margin = top, right, left, bottom 
+
+
+
+Clase - 38
+
+Hacer uso de una maquetación de nuestra web a lápiz, planificando de forma ordenada y bien hecha todos los elementos, agrupandolos y dando así una mejor inmersión para el usuario que esté en nuestra página
+
+
+
+Clase - 39
+
+Se recomienda estilizar y diseñar en css, desde el mas grande al más pequeño, en el orden que se encuentren dentro de cada contenedor
+
+
+Layout = La parte primordial de nuestra página. 
+
+Los estilos que se aplican en línea con el HTML son de más importancia que los de CSS
+
+
+
+
+
+Clase - 40
+
+*se me descuadró el JS * 
+
+*se pudo solucionar el error*
+
+Se añadió estilos a la caja de resultados del combate y el boton de reinicio de juego
+
+
+
+
+Clase - 41
+
+(grid - rejillas)
+
+
+css-tricks.com > Grid
+cssgridgarden.com > Juego interactivo para el aprendizaje de la herramienta Grid
+flexboxfroggy.com > Juego interactivo para el manejo de la herramiento Flexbox
+
+
+
+
+Clase - 42
+
+@media = funcionamiento para el desarrollo de nuestra página web desde cualquier dispositivo
+
+
+
+
+Clase - 43
+
+Pseudo-clases = Nos sirve para la interacción que tenga el usuario con nuestra página web
+
+	*hover: 	Sirve para agregar un estilo para cuando pasamos por encima el cursor
+	*active:	cuando se pulsa el botón, se queda activa la función 
+	*checked:	Esta como su nombre lo dice, chequea el input seleccionado
+
+podemos fusionar dos elementos, ejemplo:
+							input:checked + label {
+									backgroung-color: red;
+								}
+esta función hará que la selección realizada no se haga solo en el input, sino también con el label

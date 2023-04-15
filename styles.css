@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+
+
+body {
+    font-family: 'Passion One', cursive;
+    background-color: #FF6D60;
+}
+
+
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.titulo {
+    color: #98D8AA;
+    font-size: 50px;
+}
+
+
+.subtitulo {
+    color: #98D8AA;
+    font-size: 35px;
+}
+
+
+.tarjetas, .tarjetas-ataque {
+    display: flex;
+    gap: 10px;
+}
+
+
+.tarjeta-de-materia { 
+    width: 180px;
+    height: 100px;
+    background: #F7D060;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 1px solid red;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+}
+.tarjeta-de-materia:hover {
+    width: 180px;
+    height: 100px;
+    background: #c79e22;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 1px solid rgb(255, 0, 119);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(148, 120, 120);
+}
+
+
+.tarjeta-de-materia img {
+    width: 80px;
+}
+
+.boton-de-mascota {
+    width: 130px;
+    height: 40px;
+    background: rgb(211, 99, 35); 
+    margin-top: 20px;
+    font-family: 'Lobster Two', cursive;
+    font-size: 20px;
+    border: 1px solid red;
+    border-radius: 20px;
+    color: #98D8AA;
+}
+.boton-de-mascota:hover {
+    width: 130px;
+    height: 40px;
+    background: rgb(175, 202, 23);
+    margin-top: 20px;
+    font-family: 'Lobster Two', cursive;
+    font-size: 20px;
+    border: 2px solid red;
+    border-radius: 20px;
+    color: #F7D060;
+}
+
+
+input{
+    display: none;
+}
+
+input:checked + label {
+    background-color: rgb(219, 104, 135);
+}
+
+#seleccionar-ataque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-de-ataque { 
+    background-color: #c79e22;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 120px;
+    color: white;
+    font-family: 'Lobster Two', cursive;
+    font-size: 21px;
+    margin: 10px;
+}
+.boton-de-ataque:hover { 
+    background-color: #fcc729;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 120px;
+    color: rgb(148, 142, 142);
+    font-family: 'Lobster Two', cursive;
+    font-size: 21px;
+}
+
+#mensajes {
+    width: 250px;
+    padding: 5px;
+    background: #fcc729;
+    color: #FF6D60;
+    margin: 5px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#boton-reiniciar {
+    border: none;
+    color: #fcc729;
+    background-color:#FF6D60;
+    font-size: 17px;
+    border-radius: 10px;
+    font-family: 'Lobster Two', cursive;
+}
+
+#boton-reiniciar:hover {
+    border: none;
+    color: #bba259;
+    background-color:#f08980;
+    font-size: 17px;
+    border-radius: 10px;
+    font-family: 'Lobster Two', cursive;
+}
+
+.ataques {
+    display: grid;
+    grid-template-columns: 150px 150px;
+
+}
+
+.ataques-jugador, .ataques-enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+@media (max-width: 360px) {
+    .tarjetas, .tarjetas-ataque {
+        flex-direction: column;
+    }
+}
