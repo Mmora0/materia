@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
 
 
 body {
-    font-family: 'Passion One', cursive;
+    font-family: 'DynaPuff', cursive;
     background-color: #FF6D60;
 }
 
@@ -17,13 +17,13 @@ body {
 
 
 .titulo {
-    color: #98D8AA;
+    color: #ffffff;
     font-size: 50px;
 }
 
 
 .subtitulo {
-    color: #98D8AA;
+    color: #ffffff;
     font-size: 35px;
 }
 
@@ -35,7 +35,7 @@ body {
 
 
 .tarjeta-de-materia { 
-    width: 180px;
+    width: 220px;
     height: 100px;
     background: #F7D060;
     padding: 10px;
@@ -50,7 +50,7 @@ body {
     font-size: 25px;
 }
 .tarjeta-de-materia:hover {
-    width: 180px;
+    width: 220px;
     height: 100px;
     background: #c79e22;
     padding: 10px;
@@ -130,7 +130,7 @@ input:checked + label {
 }
 
 #mensajes {
-    width: 250px;
+    width: 280px;
     padding: 5px;
     background: #fcc729;
     color: #FF6D60;
@@ -165,12 +165,16 @@ input:checked + label {
 
 }
 
+.parrafo {
+    color: rgb(75, 72, 72);
+}
+
 .ataques-jugador, .ataques-enemigo {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 @media (max-width: 360px) {
