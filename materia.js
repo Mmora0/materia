@@ -8,9 +8,6 @@ const botonTierra = document.getElementById('boton-tierra')
 const botonReiniciar = document.getElementById('boton-reiniciar')
 
 const sectionSeleccionarMascota = document.getElementById('seleccionar-mascota')
-const inputHipodoge = document.getElementById('hipodoge')
-const inputCapipepo = document.getElementById('capipepo')
-const inputRatigueya = document.getElementById('ratigueya')
 const spanMascotaJugador = document.getElementById('mascota-jugador')
 
 const spanMascotaEnemigo = document.getElementById('mascota-enemigo')
@@ -22,10 +19,16 @@ const sectionMensajes = document.getElementById('resultado')
 const ataquesDelJugador = document.getElementById('ataques-del-jugador')
 const ataquesDelEnemigo = document.getElementById('ataques-del-enemigo')
 
+const contenedorTarjetas = document.getElementById('contenedorTarjetas')
+
 
 let materias = []
 let ataqueJugador 
 let ataqueEnemigo
+let opcionDeMaterias
+let inputHipodoge
+let inputCapipepo
+let inputRatigueya
 let vidasJugador = 3
 let vidasEnemigo = 3
 
@@ -66,10 +69,25 @@ ratigueya.ataques.push(
     { nombre: '🔥', id: 'boton-fuego' },
 )
 
-
+materias.push(hipodoge, capipepo, ratigueya)
 
 function iniciarJuego() {
     sectionReiniciar.style.display = 'none'
+    materias.forEach((materia) => {
+        opcionDeMaterias =  `
+        <input type="radio" name="mascota" id=${materia.nombre} />
+        <label class="tarjeta-de-materia" for=${materia.nombre}>
+            <p>${materia.nombre}</p>
+            <img src=${materia.foto} alt=${materia.nombre}>
+        </label>
+        `
+    contenedorTarjetas.innerHTML += opcionDeMaterias
+
+     inputHipodoge = document.getElementById('Hipodoge')
+     inputCapipepo = document.getElementById('Capipepo')
+     inputRatigueya = document.getElementById('Ratigueya')
+
+    })
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
     botonFuego.addEventListener('click', ataqueFuego)
     botonAgua.addEventListener('click', ataqueAgua)
