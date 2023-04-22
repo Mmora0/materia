@@ -594,3 +594,165 @@ podemos fusionar dos elementos, ejemplo:
 									backgroung-color: red;
 								}
 esta función hará que la selección realizada no se haga solo en el input, sino también con el label
+
+
+Clase - 44
+
+Realizamos un chequeo de toda la estructura de nuestro código, verificando y viendo que puntos pueden ser optimizados y mejorados, para un mejor desarrollo y para posteriores cambios o adaptaciones
+
+	* Se recomienda linkear el Js en la zona inferior de la estructura de nuestro html, para no generar bloqueos, 
+	a la hora de carga de nuestra página, ubicado antes de cerrar el body
+
+Esto nos asegura poder ver nuestra página y después obtener la interacción que queremos, mejorando así el funcionamiento de nuestra página.
+
+
+
+
+
+
+Clase - 45
+
+Organizamos nuestro javascript, sacando de las funciones las declaraciones, para mejorar el flujo.
+Así mismo, al hacer esto, podemos notar que estamos repitiando algunas funciones, por lo que eliminamos estas que se repiten, ya que afectan el funcionamiento de nuestr página estando por fuera de las declaraciones.
+
+
+Hay que revisar que cuando se retire una función de una declaración esta afecte directamente el html y no esté generando algo o creando un elemento nuevo.
+
+Variables Let = son todas aquellas que su valor puede variar = un contador
+Variables Const = Estas son las variables que son constantes y su valor siempre es el mismo = el titulo de la página
+
+
+DRY = (Don't Repeat Yourself)
+
+
+
+
+
+Clase - 46
+
+Clases y Objetos = Uno depende y existe por el otro.
+
+
+		* Planos de una casa 	= Clase
+		* Casa 			= Objetos
+
+
+
+
+Clase - 47
+
+	*	Class = Para crear una clase en JS, es primordial que la palabra sea en mayúscula
+	*	Constructor = Es una palabra reservada que sirve para "construir" (dentro de esta van las propiedades 			que lleven los objetos) [cosas especificas del objeto]
+	*   	This = Esto mismo, la propiedad del objeto es igual a (se agrega un '.' y seguido el nombre de la 				propiedad)
+	*	New = hace referencia a un nuevo objeto		(let (nombre) = new)
+	*	console.log = Permite hacer mensajes en el navegador para ver cosas que nos interesen en el código
+	
+
+
+
+
+Clase - 48
+
+Arreglos = tipo de variable para agrupar una cantidad de variables 
+
+
+Clase - 49
+
+Objetos instancia = se construyen utilizando una clase  
+Objetos literario = se construyen desde cero, para guardar información
+
+
+Clase - 50
+
+Manipular el DOM con iteradores
+
+Metodo: forEach = Por cada uno de nuestros arreglos, haz algo
+
+Se hicieron modificaciones, cambiando nuestro HTML de ser estática a dinámica, mejorando el flujo de respuesta en el navegador, optimizando funciones
+
+
+
+Clase - 51 
+
+Declaración lenta de variables
+
+Se optimiza desde JS generando los elementos de HTML y luego sus debidas acciones de cada elemento.
+
+Debemos tener en cuenta que las etiquetas sean iguales que los valores asignados, incluso si hay o no una mayuscula
+
+
+
+
+
+Clase - 52
+
+
+(typeof) = nos ayuda a ver que tipo de elemento es
+
+Realizamos y ajustamos fuentes de verdad para la selección de mascota para el jugador, llamando la variable por id y no por un texto. Para cuando necesitemos insertar más mascotas, no sea insertando nombre por nombre de cada mascota.
+
+
+*Una sola fuente de verdad = Una variable que se va utilizar repetidamente
+
+
+
+
+
+Clase - 53
+
+Esta vez optimizamos la elección de la mascota enemigo, cambiando la elección de un numero segun la variable, (0, 'nombre de la función'.lenght -1) Empieza desde cero, agregamos la longitud que tenga la variable y un menos uno, para que se ajuste a la misma longitud
+
+Ahora solo tenemos una fuente de verdad y no depende nuestro JS de números para elegir entre 0 a 2. optimizando el flujo del código
+
+
+
+
+
+Clase - 54 
+
+Creamos una función de loop, para cada vez que se elige un ataque
+
+
+
+Clas - 55
+
+Renderizamos los 5 ataques por mascota, generando sus botones. Ahora tenemos que asignar el ataque a los dos botones adicionales
+
+
+
+
+Clase - 56
+
+Eventos de click dinámicos
+
+Agregaremos que por cada boton que se cree se le genere automaticamente su función
+
+
+(querySelectorAll) = Seleccionar todos los elementos que tengan ese algo que necesitamos, por lo general seria una 'class'
+
+
+
+
+
+Clase - 57
+
+Secuencia de ataques del enemigo
+
+Optimizamos la elección de ataques del enemigo, para mejorar el flujo del código, mejorando errores encontrados anteriormente
+
+
+Clase - 58
+
+Iniciando el combate
+
+Aplicamos funciones en el manejo del combate, para seleccionar apartadamente nuestro ataque y a la vez la del enemigo, agrupando ambos ataques.
+
+
+Clase - 59
+
+Resolviendo el reto de condicionales
+
+
+Clase - 60
+
+Optimizando en frontend del juego
