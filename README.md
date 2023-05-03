@@ -756,3 +756,21 @@ Resolviendo el reto de condicionales
 Clase - 60
 
 Optimizando en frontend del juego
+
+
+Clase - 61
+
+Etiqueta <canvas> Nos dibuja un espacio rectangular dentro de nuestra pagina para poder dibujar sobre ella.
+
+Este rectangulo funciona bajo un plano cartesiano, sobre el eje x y y
+
+Cada punto que nos movamos sobre el plano cartesiano es un pixel
+
+
+En esta clase, creamos la sección de canvas, creamos un recuadro para designar el mapa y añadimos un lienzo cuadrado para diseñar la cara de uno de las mascotas.
+
+Cambiamos el lienzo que habiamos generado para convertirlo en la imagen de la mascota asignada
+
+
+
+Clase - 62
