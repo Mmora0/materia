@@ -814,3 +814,23 @@ Agregaremos en el código funciones para añadir nuestros enemigos
 
 Metodos de tipo "Clase"
 
+Añadimos los enemigos en nuestro código, usando las mismas bases de nuestras mascotas. 
+Además hicimos que estos se generaran en el mapa de canvas.
+
+
+Clase - 67
+
+Colisiones e interacción 
+
+Para que haya una colisión de objetos, debemos observar nuestro canvas como un rejilla y ver entre dos objetos que todas las opciones sean 'falsas' en su interacción (mayor - menor) en el plano cartesiano. de haber al menos una verdadera, esta no está colisionando con la otra.Deben ser todas falsas 
+
+(!==0) esta expresión es para indicar que algo es diferente que 0
+
+Cuando colisionamos con un enemigo, nuestra página lanzará un alert. 
+
+Asignamos esta colision mediante constantes, donde por cada enemigo que colisione nuestra mascota, estas dos interactuen.
+
+
+
+
+Clase - 68
