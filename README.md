@@ -776,3 +776,18 @@ Cambiamos el lienzo que habiamos generado para convertirlo en la imagen de la ma
 Clase - 62
 
 En esta clase aprenderemos a movernos a traves del recuadro que hemos hecho con canvas
+
+Creamos las funciones y variables necesarias para mover uno de nuestras mascotas através de la pantalla, haciendo solo uso del eje x
+
+Usamos el alto y ancho del recuadro para asignarlo como fuente de movimiento para el personaje.
+
+
+Clase - 63
+
+Hicimos que nuestro personaje se mueva sin tener que estar pulsando click cada vez que queramos, sino que podemos tener oprimido el click y este se moverá. Hicimos uso del metodo "onmouseup" y "onmousedown"
+
+También hicimos uso del método "setInterval" para definir el tiempo de respuesta del Objeto según cuanto tengamos oprimido el click sobre el boton para que este se mueva.
+
+
+Clase - 64
+
