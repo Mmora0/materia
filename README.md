@@ -791,3 +791,21 @@ También hicimos uso del método "setInterval" para definir el tiempo de respues
 
 Clase - 64
 
+En esta clase agregaremos la función de addEvenListener, para hacer uso de los botones y poder manejar la mascota con estos.
+
+Hicimos uso de "switch case", para poder ajustar el uso de las teclas; arriba, abajo, izquierda y derecha del mouse y poder navegar en la interfaz con el uso del teclado.
+
+
+Clase - 65
+
+En esta clase pondremos un fondo
+
+
+Colocamos el fondo, adaptando así mismo el alto y ancho de nuestro canvas.
+
+Ajustamos la configuración para poder elegir cualquier personaje y que este se cargue correctamente en el mapa de canvas. 
+
+Arreglamos el error de que estabamos llamando la función y después esta misma se cambiaba de nombre en otra función.
+
+
+Clase - 66
