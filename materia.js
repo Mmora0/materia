@@ -51,15 +51,15 @@ let mapaBackground = new Image()
 mapaBackground.src = './assets/mokemap.png'
 
 class Materia {
-    constructor(nombre, foto, vida, x, y, fotoMapa) {
+    constructor(nombre, foto, vida, fotoMapa, x = 10, y = 10) {
         this.nombre = nombre
         this.foto = foto
         this.vida = vida
         this.ataques = []
-        this.x = 20
-        this.y = 30
-        this.ancho = 80
-        this.alto = 80
+        this.x = x
+        this.y = y
+        this.ancho = 105
+        this.alto = 105
         this.mapaFoto = new Image()
         this.mapaFoto.src = fotoMapa
         this.velocidadX = 0
@@ -67,11 +67,25 @@ class Materia {
         
 
     } 
+
+    pintarMateria() {
+        lienzo.drawImage(
+            this.mapaFoto,
+            this.x,
+            this.y,
+            this.ancho,
+            this.alto,
+        )
+    }
 }
 
-let hipodoge = new Materia('Hipodoge', 'assets/hipodoge.png', 5)
-let capipepo = new Materia('Capipepo', 'assets/capipepo.png', 5)
-let ratigueya = new Materia('Ratigueya', 'assets/ratigueta.png', 5)
+let hipodoge = new Materia('Hipodoge', 'assets/hipodoge.png', 5, 'assets/hipodoge.png')
+let capipepo = new Materia('Capipepo', 'assets/capipepo.png', 5, 'assets/capipepo.png')
+let ratigueya = new Materia('Ratigueya', 'assets/ratigueta.png', 5, 'assets/ratigueta.png')
+
+let hipodogeEnemigo = new Materia('Hipodoge', 'assets/hipodoge.png', 5,'./assets/cabezahipodoge.png',80, 120 )
+let capipepoEnemigo = new Materia('Capipepo', 'assets/capipepo.png', 5, './assets/cabezacapipepo.png', 150, 95)
+let ratigueyaEnemigo = new Materia('Ratigueya', 'assets/ratigueta.png', 5, './assets/cabezaratigueya.png', 200, 190)
 
 hipodoge.ataques.push(
     { nombre: '🔥', id: 'boton-fuego' },
@@ -311,13 +325,10 @@ function pintarCanvas() {
         mapa.width,
         mapa.height,
     )
-    lienzo.drawImage(
-        mascotaJugadorObjeto.mapaFoto,
-        mascotaJugadorObjeto.x,
-        mascotaJugadorObjeto.y,
-        mascotaJugadorObjeto.ancho,
-        mascotaJugadorObjeto.alto,
-    )
+    mascotaJugadorObjeto.pintarMateria()
+    hipodogeEnemigo.pintarMateria()
+    capipepoEnemigo.pintarMateria()
+    ratigueyaEnemigo.pintarMateria()
 }
 
 function moverDerecha() {
