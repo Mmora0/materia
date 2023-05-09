@@ -805,7 +805,12 @@ Colocamos el fondo, adaptando así mismo el alto y ancho de nuestro canvas.
 
 Ajustamos la configuración para poder elegir cualquier personaje y que este se cargue correctamente en el mapa de canvas. 
 
-Arreglamos el error de que estabamos llamando la función y después esta misma se cambiaba de nombre en otra función.
+Arreglamos el error de que estabamos llamando la variable y después esta misma se cambiaba de nombre en otra función, posicionamos la variable al final de la función
 
 
 Clase - 66
+
+Agregaremos en el código funciones para añadir nuestros enemigos
+
+Metodos de tipo "Clase"
+

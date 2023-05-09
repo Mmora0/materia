@@ -51,7 +51,7 @@ let mapaBackground = new Image()
 mapaBackground.src = './assets/mokemap.png'
 
 class Materia {
-    constructor(nombre, foto, vida) {
+    constructor(nombre, foto, vida, x, y, fotoMapa) {
         this.nombre = nombre
         this.foto = foto
         this.vida = vida
@@ -61,7 +61,7 @@ class Materia {
         this.ancho = 80
         this.alto = 80
         this.mapaFoto = new Image()
-        this.mapaFoto.src = foto
+        this.mapaFoto.src = fotoMapa
         this.velocidadX = 0
         this.velocidadY = 0
         
