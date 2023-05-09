@@ -774,3 +774,5 @@ Cambiamos el lienzo que habiamos generado para convertirlo en la imagen de la ma
 
 
 Clase - 62
+
+En esta clase aprenderemos a movernos a traves del recuadro que hemos hecho con canvas
