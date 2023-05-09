@@ -834,3 +834,23 @@ Asignamos esta colision mediante constantes, donde por cada enemigo que colision
 
 
 Clase - 68
+
+Ya hicimos la colision entre los objetos, ahora que colisionemos con un enemigo mostraremos la interfaz de batalla con el enemigo que colisionemos y ocultaremos la interfaz del mapa.
+
+Ya podemos seleccionar nuestra mascota, recorrer el mapa, colisionar con un enemigo y pelear con el.
+
+
+
+
+
+Clase - 69
+
+
+Mapa Responsive
+
+Adaptaremos el ancho del mapa, en la pantalla.
+
+Ya adaptamos el ancho del mapa, dependiendo del tamaño de la pantalla que lo esté abriendo.
+Eliminamos el borde y ajustamos el tamaño de nuestras mascotas
+
+Limpiamos nuestro código, eliminando datos innecesarios que teniamos de posición en nuestra mascota y en la del enemigo.
