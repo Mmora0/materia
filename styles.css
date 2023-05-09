@@ -182,9 +182,28 @@ input:checked + label {
     align-items: center;
     justify-content: center;
 }
+#ver-mapa button {
+    width: 90px;
+    height: 40px;
+    background: rgb(211, 99, 35); 
+    margin-top: 20px;
+    font-family: 'Lobster Two', cursive;
+    font-size: 20px;
+    border: 1px solid red;
+    border-radius: 20px;
+    color: #98D8AA;
+    margin: 4px;
+}
 
-@media (max-width: 360px) {
+@media (max-width: 560px) {
     .tarjetas, .tarjetas-ataque {
+        flex-direction: column;
+    }
+}
+@media (max-width: 300px) {
+    #ver-mapa div {
+        display: flex;
+        align-items: center;
         flex-direction: column;
     }
 }

@@ -854,3 +854,16 @@ Ya adaptamos el ancho del mapa, dependiendo del tamaño de la pantalla que lo es
 Eliminamos el borde y ajustamos el tamaño de nuestras mascotas
 
 Limpiamos nuestro código, eliminando datos innecesarios que teniamos de posición en nuestra mascota y en la del enemigo.
+
+
+
+Clase - 70
+
+Configuramos los botones de movimiento en el mapa, donde los hicimos como si fueran de consola, para una mejor interacción.
+
+
+Utilizamos un media viewport y lo insertamos en el meta de nuestro html, para hacer que nuestra paágina active los responsive en diferentes dispositivos.
+
+
+
+Clase - 71
