@@ -923,4 +923,38 @@ Para informarnos más sobre el uso de 'express js' lo podemos hacer desde "expre
 
 
 
+
+
 Clase - 75
+
+HTTP, localhost, servidores y puertos
+
+(URI = Uniform Resource Identifier) = la forma en la que podemos identificarnos en cualquier sitio web
+
+	URL(uniform resource locator) + URN(uniform resource name)
+
+	Partes de una URI = esquema(https:) + dominio(platzi.com) + puerto(44) + ruta(search) + cadena de busqueda(search=js) + nombre(title)
+
+					|			URL						   | URN |
+		} 			(https://platzi.com:44/search?search=js#title)
+
+
+	ESQUEMA: 				que forma tendrán los mensajes
+	DOMINIO/AUTORIDAD:		
+	PUERTO:					es el numero por el medio que le indicamos a la pc a que medio nos queremos comunicar
+	RECURSO/RUTA:			
+	CADENA DE BUSQUEDA:		
+	NOMBRE:					esta lleva el # para separarla la urn de la url
+
+LOCALHOST: nuestro pc como servidor
+
+
+Verbos HTTP
+		GET 	= 	Solicitar recursos
+		POSt	=	Enviar datos
+
+
+
+
+Clase - 76
+
