@@ -1,0 +1,11 @@
+{
+  "name": "materia",
+  "version": "1.0.0",
+  "description": "Desarrollador por: MIGUEL ANGEL MORA ORTIZ\r Programa: DESARROLLO DE VIDEOJUEGOS Y ENTORNOS INTERACTIVOS\r SENA\r Ibagué, Tolima \r Colombia",
+  "main": "materia.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mmora0",
+  "license": "ISC"
+}

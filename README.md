@@ -866,4 +866,40 @@ Utilizamos un media viewport y lo insertamos en el meta de nuestro html, para ha
 
 
 
+
 Clase - 71
+
+
+¿Qué es Backend?
+
+Platzi(servidor - respuesta)  ->  Alguien tomando el curso(cliente -  petición)
+
+(Protocolo) Https = Protocolo de transferencia de hipertexto 
+
+API = aplication programming interface
+
+
+
+Clase - 72
+
+Hicimos la intalación de node.js, que nos servirá para el uso y manejo de datos de nuestra página web
+
+(nodejs.org)
+
+Para probar la efectividad de la descarga, abrimos una nueva terminal y ejecutamos el código (node -v) nos debe aparecer la versión instalada del programa, como también (npm)
+
+Si nos sale algún error, probamos con cerrar y volver a abrir el VSC
+
+
+
+Clase - 73
+
+Terminal de comandos = Es una herramienta para el uso de programas sin interfaz gráfica, solo por texto.
+
+Librería = Código ya hecho que podemos usar libremente
+
+(ls) = lista los archivos de la carpeta donde estamos ubicados
+(cd) = cambiar directorio
+(cd ..) = ir atrás
+(cd + nombre de carpeta) = entramos a la carpeta nombrada
+(npm init) = creación de proyecto
