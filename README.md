@@ -903,3 +903,24 @@ Librería = Código ya hecho que podemos usar libremente
 (cd ..) = ir atrás
 (cd + nombre de carpeta) = entramos a la carpeta nombrada
 (npm init) = creación de proyecto
+
+
+Imprimimos nuestro primer "hola mundo", en nuestra terminal haciendo uso del archivo js
+
+
+
+
+Clase - 74
+
+Express js = Libreria para el desarrollo BackEnd
+
+-importamos express,js
+	creamos una aplicación con express js
+		le decimos a express js cuando la url raíz reciba una petición responda "hola"
+			le pedimos que escuche en el puerto (8080 - 5500) las peticiones del cliente
+
+Para informarnos más sobre el uso de 'express js' lo podemos hacer desde "expressjs.com"
+
+
+
+Clase - 75
