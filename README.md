@@ -958,3 +958,40 @@ Verbos HTTP
 
 Clase - 76
 
+Realizamos una función que por cada jugador que ingrese nuestro comando, este generara un código aleatorio designado para este.
+
+Agregamos esta función en nuestro JS, para que se llame la función y se active cada vez que alguien entre al juego
+
+(fetch) = Función para realizar llamadas hacia otros servicios por medio de https y que tipo de petición
+
+Petición asincrona = No sabemos cuando vamos a obtener la respuesta
+
+Solucionamos un error de tipo de acceso por desconocimiento de la fuente del link, para permitir que nuestra página nos genere la ID, por cada vez que entremos. Con esto conectamos el FrontEnd con el BackEnd con el uso de un servidor
+
+
+
+
+
+clase - 77
+
+JSON = JavaScript Object Notation
+
+	{"clave":"valor"}
+
+	clave = nombre de una variable
+	valor = dato/cade de texto, numero
+
+		{
+			Nombre: "Diana",
+			Edad: 27
+		}
+
+
+
+	Jugador > {id} > MAteria
+
+
+Instalamos una libreria para el libre acceso
+	Insertamos en la terminal el código = npm install cors
+
+
