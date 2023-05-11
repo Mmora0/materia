@@ -24,6 +24,7 @@ const contenedorAtaques = document.getElementById('contenedorAtaques')
 const sectionVerMapa = document.getElementById('ver-mapa')
 const mapa = document.getElementById('mapa')
 
+let jugadorId = null
 let materias = []
 let ataqueJugador = []
 let ataqueEnemigo = []
@@ -176,7 +177,8 @@ function unirseAlJuego() {
         if (res.ok) {
             res.text()
             .then(function(respuesta) {
-                console.log(respuesta);
+                console.log(respuesta)
+                jugadorId = respuesta
             })
         }
     })
@@ -199,9 +201,23 @@ function seleccionarMascotaJugador(){
         alert("Debes seleccionar una mascota")
     }
 
+    selecciorMateria(mascotaJugador)
+
     extraerAtaques(mascotaJugador)
     sectionVerMapa.style.display = 'flex'
     iniciarMapa()
+}
+
+function selecciorMateria(mascotaJugador) {
+    fetch(`http://localhost:5500/materia/${jugadorId}`, {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            materia: mascotaJugador
+        })
+    })
 }
 
 function extraerAtaques(mascotaJugador) {

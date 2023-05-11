@@ -995,3 +995,12 @@ Instalamos una libreria para el libre acceso
 	Insertamos en la terminal el código = npm install cors
 
 
+Hicimos que el servidor nos muestre que tipo de mascota eligió el jugador además de mostrar su id.
+
+
+
+Clase - 78
+
+
+
+
