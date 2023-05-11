@@ -1002,5 +1002,17 @@ Hicimos que el servidor nos muestre que tipo de mascota eligió el jugador adem�
 Clase - 78
 
 
+Transmisión de coordenadas
+
+Agregamos a nuestro juego la lectura de coordenadas en el servidor, mediante el codigo y obtención de datos con JSON
+
+Hacemos uso del archivo materia.js y index.js, trabajando en conjunto para hacer esto posible.
+
+
+
+
+Clase - 79
+
+
 
 

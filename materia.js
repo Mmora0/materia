@@ -64,7 +64,8 @@ mapa.width = anchoDelMapa
 mapa.height = alturaQueBuscamos
 
 class Materia {
-    constructor(nombre, foto, vida, fotoMapa,) {
+    constructor(nombre, foto, vida, fotoMapa, id = null) {
+        this.id = id
         this.nombre = nombre
         this.foto = foto
         this.vida = vida
@@ -94,54 +95,32 @@ let hipodoge = new Materia('Hipodoge', 'assets/hipodoge.png', 5, 'assets/hipodog
 let capipepo = new Materia('Capipepo', 'assets/capipepo.png', 5, 'assets/capipepo.png')
 let ratigueya = new Materia('Ratigueya', 'assets/ratigueta.png', 5, 'assets/ratigueta.png')
 
-let hipodogeEnemigo = new Materia('Hipodoge', 'assets/hipodoge.png', 5,'assets/hipodoge.png')
-let capipepoEnemigo = new Materia('Capipepo', 'assets/capipepo.png', 5, 'assets/capipepo.png')
-let ratigueyaEnemigo = new Materia('Ratigueya', 'assets/ratigueta.png', 5, 'assets/ratigueta.png')
+const HIPODOGE_ATAQUES = [
+    { nombre: '🔥', id: 'boton-fuego' },
+    { nombre: '🔥', id: 'boton-fuego' },
+    { nombre: '🔥', id: 'boton-fuego' },
+    { nombre: '💧', id: 'boton-agua' },
+    { nombre: '🌱', id: 'boton-tierra' },
+]
+hipodoge.ataques.push(...HIPODOGE_ATAQUES)
 
-hipodoge.ataques.push(
-    { nombre: '🔥', id: 'boton-fuego' },
-    { nombre: '🔥', id: 'boton-fuego' },
-    { nombre: '🔥', id: 'boton-fuego' },
+const CAPIPEPO_ATAQUES = [
     { nombre: '💧', id: 'boton-agua' },
-    { nombre: '🌱', id: 'boton-tierra' },
-)
-hipodogeEnemigo.ataques.push(
-    { nombre: '🔥', id: 'boton-fuego' },
-    { nombre: '🔥', id: 'boton-fuego' },
-    { nombre: '🔥', id: 'boton-fuego' },
     { nombre: '💧', id: 'boton-agua' },
+    { nombre: '💧', id: 'boton-agua' },
+    { nombre: '🔥', id: 'boton-fuego' },
     { nombre: '🌱', id: 'boton-tierra' },
-)
+]
+capipepo.ataques.push(...CAPIPEPO_ATAQUES)
 
-capipepo.ataques.push(
-    { nombre: '💧', id: 'boton-agua' },
-    { nombre: '💧', id: 'boton-agua' },
-    { nombre: '💧', id: 'boton-agua' },
-    { nombre: '🔥', id: 'boton-fuego' },
-    { nombre: '🌱', id: 'boton-tierra' },
-)
-capipepoEnemigo.ataques.push(
-    { nombre: '💧', id: 'boton-agua' },
-    { nombre: '💧', id: 'boton-agua' },
-    { nombre: '💧', id: 'boton-agua' },
-    { nombre: '🔥', id: 'boton-fuego' },
-    { nombre: '🌱', id: 'boton-tierra' },
-)
-
-ratigueya.ataques.push(
+const RATIGUEYA_ATAQUES = [
     { nombre: '🌱', id: 'boton-tierra' },
     { nombre: '🌱', id: 'boton-tierra' },
     { nombre: '🌱', id: 'boton-tierra' },
     { nombre: '💧', id: 'boton-agua' },
     { nombre: '🔥', id: 'boton-fuego' },
-)
-ratigueyaEnemigo.ataques.push(
-    { nombre: '🌱', id: 'boton-tierra' },
-    { nombre: '🌱', id: 'boton-tierra' },
-    { nombre: '🌱', id: 'boton-tierra' },
-    { nombre: '💧', id: 'boton-agua' },
-    { nombre: '🔥', id: 'boton-fuego' },
-)
+]
+ratigueya.ataques.push(...RATIGUEYA_ATAQUES)
 
 materias.push(hipodoge, capipepo, ratigueya)
 
@@ -173,12 +152,12 @@ function iniciarJuego() {
 
 function unirseAlJuego() {
     fetch("http://localhost:5500/unirse")
-    .then(function(res) {
+    .then(function (res) {
         if (res.ok) {
             res.text()
-            .then(function(respuesta) {
-                console.log(respuesta)
-                jugadorId = respuesta
+                .then(function (respuesta) {
+                    console.log (respuesta)
+                    jugadorId = respuesta
             })
         }
     })
@@ -383,6 +362,7 @@ function pintarCanvas() {
         mapa.height,
     )
     mascotaJugadorObjeto.pintarMateria()
+    enviarPosicion(mascotaJugadorObjeto.x, mascotaJugadorObjeto.y)
     hipodogeEnemigo.pintarMateria()
     capipepoEnemigo.pintarMateria()
     ratigueyaEnemigo.pintarMateria()
@@ -391,6 +371,43 @@ function pintarCanvas() {
         revisarColision(capipepoEnemigo)
         revisarColision(ratigueyaEnemigo)
     }
+}
+
+function enviarPosicion(x, y) {
+    fetch(`http://localhost:5500/materia/${jugadorId}/posicion`, {
+        method: "post",
+        headers: {
+            "Content-Type": "aplication/json"
+        },
+        body: JSON.stringify({
+            x,
+            y
+        })
+    })
+    .then(function (res) {
+        if (res.ok) {
+            res.json()
+                .then(function ({ enemigos }) {
+                    console.log(enemigos)
+                    enemigos.forEach(function (enemigo) {
+                        let materiaEnemigo = null
+                        const materiaNombre = enemigo.materia.nombre || ""
+                        if (materiaNombre === "Hipodoge") {
+                            materiaEnemigo = new Materia('Hipodoge', 'assets/hipodoge.png', 5,'assets/hipodoge.png')
+                        } else if (materiaNombre === "Capipepo") {
+                            materiaEnemigo = new Materia('Capipepo', 'assets/capipepo.png', 5, 'assets/capipepo.png')
+                        } else if (materiaNombre === "Ratigueya") {
+                            materiaEnemigo = new Materia('Ratigueya', 'assets/ratigueta.png', 5, 'assets/ratigueta.png')
+                        }
+
+                        materiaEnemigo.x = enemigo.x
+                        materiaEnemigo.y = enemigo.y
+
+                        materiaEnemigo.pintarMateria()
+                    })
+                })
+        }
+    })
 }
 
 function moverDerecha() {
