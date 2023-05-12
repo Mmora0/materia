@@ -1013,6 +1013,19 @@ Hacemos uso del archivo materia.js y index.js, trabajando en conjunto para hacer
 
 Clase - 79
 
+Mascotas dinámicas en el mapa
+
+En esta clase hicimos que las mascotas seleccionadas, por diferentes usuarios a la vez dentro de nuestro juego, se aparezcan dentro del mismo mapa. 
+
+Arreglamos las funciones de ataques, haciendo que esta funcione de una manera más optima. 
+
+
+
+Clase - 80
+
+Optimizaremos la latencia de carga que tiene el jugador enemigo dentro del mapa, para evitar el parpadeo dentro de nuestra pantalla. 
+
+(map) metodo con una similitud al metodo (forEach), con la diferencia que esta no solo ejecuta, sino que retorna un valor generando una lista
 
 
 

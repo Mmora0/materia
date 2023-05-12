@@ -26,6 +26,7 @@ const mapa = document.getElementById('mapa')
 
 let jugadorId = null
 let materias = []
+let materiasEnemigos = []
 let ataqueJugador = []
 let ataqueEnemigo = []
 let opcionDeMaterias
@@ -363,9 +364,10 @@ function pintarCanvas() {
     )
     mascotaJugadorObjeto.pintarMateria()
     enviarPosicion(mascotaJugadorObjeto.x, mascotaJugadorObjeto.y)
-    hipodogeEnemigo.pintarMateria()
-    capipepoEnemigo.pintarMateria()
-    ratigueyaEnemigo.pintarMateria()
+    
+    materiasEnemigos.forEach(function (materia) {
+        materia.pintarMateria()
+    })
     if (mascotaJugadorObjeto.velocidadX !== 0 || mascotaJugadorObjeto.velocidadY !== 0){
         revisarColision(hipodogeEnemigo)
         revisarColision(capipepoEnemigo)
@@ -389,21 +391,21 @@ function enviarPosicion(x, y) {
             res.json()
                 .then(function ({ enemigos }) {
                     console.log(enemigos)
-                    enemigos.forEach(function (enemigo) {
+                    materiasEnemigos = enemigos.map(function (enemigo) {
                         let materiaEnemigo = null
                         const materiaNombre = enemigo.materia.nombre || ""
-                        if (materiaNombre === "Hipodoge") {
-                            materiaEnemigo = new Materia('Hipodoge', 'assets/hipodoge.png', 5,'assets/hipodoge.png')
-                        } else if (materiaNombre === "Capipepo") {
-                            materiaEnemigo = new Materia('Capipepo', 'assets/capipepo.png', 5, 'assets/capipepo.png')
-                        } else if (materiaNombre === "Ratigueya") {
-                            materiaEnemigo = new Materia('Ratigueya', 'assets/ratigueta.png', 5, 'assets/ratigueta.png')
-                        }
+                            if (materiaNombre === "Hipodoge") {
+                                materiaEnemigo = new Materia('Hipodoge', 'assets/hipodoge.png', 5,'assets/hipodoge.png')
+                            } else if (materiaNombre === "Capipepo") {
+                                materiaEnemigo = new Materia('Capipepo', 'assets/capipepo.png', 5, 'assets/capipepo.png')
+                            } else if (materiaNombre === "Ratigueya") {
+                                materiaEnemigo = new Materia('Ratigueya', 'assets/ratigueta.png', 5, 'assets/ratigueta.png')
+                            }
 
                         materiaEnemigo.x = enemigo.x
                         materiaEnemigo.y = enemigo.y
 
-                        materiaEnemigo.pintarMateria()
+                        return materiaEnemigo
                     })
                 })
         }
