@@ -381,33 +381,34 @@ function enviarPosicion(x, y) {
     fetch(`http://localhost:5500/materia/${jugadorId}/posicion`, {
         method: "post",
         headers: {
-            "Content-Type": "aplication/json"
+            "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            x,
-            y
+            x: x,
+            y: y
         })
     })
     .then(function (res) {
         if (res.ok) {
             res.json()
                 .then(function ({ enemigos }) {
-                    console.log(enemigos)
                     materiasEnemigos = enemigos.map(function (enemigo) {
-                        let materiaEnemigo = null
-                        const materiaNombre = enemigo.materia.nombre || ""
-                            if (materiaNombre === "Hipodoge") {
-                                materiaEnemigo = new Materia('Hipodoge', 'assets/hipodoge.png', 5,'assets/hipodoge.png')
-                            } else if (materiaNombre === "Capipepo") {
-                                materiaEnemigo = new Materia('Capipepo', 'assets/capipepo.png', 5, 'assets/capipepo.png')
-                            } else if (materiaNombre === "Ratigueya") {
-                                materiaEnemigo = new Materia('Ratigueya', 'assets/ratigueta.png', 5, 'assets/ratigueta.png')
-                            }
+                        if (enemigo.materia != undefined) {
+                            let materiasEnemigos = null
+                            const materiaNombre = enemigo.materia.nombre || ""
+                                if (materiaNombre === "Hipodoge") {
+                                    materiasEnemigos = new Materia('Hipodoge', 'assets/hipodoge.png', 5,'assets/hipodoge.png')
+                                } else if (materiaNombre === "Capipepo") {
+                                    materiasEnemigos = new Materia('Capipepo', 'assets/capipepo.png', 5, 'assets/capipepo.png')
+                                } else if (materiaNombre === "Ratigueya") {
+                                    materiasEnemigos = new Materia('Ratigueya', 'assets/ratigueta.png', 5, 'assets/ratigueta.png')
+                                }
 
-                        materiaEnemigo.x = enemigo.x
-                        materiaEnemigo.y = enemigo.y
+                            materiasEnemigos.x = enemigo.x
+                            materiasEnemigos.y = enemigo.y
 
-                        return materiaEnemigo
+                            return materiasEnemigos
+                        }
                     })
                 })
         }
