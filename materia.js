@@ -38,7 +38,7 @@ let mascotaJugadorObjeto
 let ataquesMateria
 let ataquesMateriaEnemigo = []
 let botonFuego
-let botonAgua 
+let botonAgua
 let botonTierra
 let botones = []
 let indexAtaqueJugador
@@ -79,7 +79,7 @@ class Materia {
         this.mapaFoto.src = fotoMapa
         this.velocidadX = 0
         this.velocidadY = 0
-    } 
+    }
 
     pintarMateria() {
         lienzo.drawImage(
@@ -128,7 +128,7 @@ materias.push(hipodoge, capipepo, ratigueya)
 function iniciarJuego() {
     sectionReiniciar.style.display = 'none'
     sectionVerMapa.style.display = 'none'
-    
+
     materias.forEach((materia) => {
         opcionDeMaterias =  `
         <input type="radio" name="mascota" id=${materia.nombre} />
@@ -145,7 +145,7 @@ function iniciarJuego() {
 
     })
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
-   
+
     botonReiniciar.addEventListener('click', reiniciarJuego)
 
     unirseAlJuego()
@@ -165,7 +165,7 @@ function unirseAlJuego() {
 }
 
 function seleccionarMascotaJugador(){
-    
+
     sectionSeleccionarMascota.style.display = 'none'
 
     if (inputHipodoge.checked) {
@@ -206,7 +206,7 @@ function extraerAtaques(mascotaJugador) {
         if (mascotaJugador === materias[i].nombre) {
             ataques = materias[i].ataques
         }
-        
+
     }
     mostrarAtaques(ataques)
 }
@@ -252,7 +252,7 @@ function secuenciaAtaque() {
 
 function seleccionarMascotaEnemigo() {
     let mascotaAleatorio = aleatorio (0, materias.length -1)
-    
+
     spanMascotaEnemigo.innerHTML = materias[mascotaAleatorio].nombre
     ataquesMateriaEnemigo = materias[mascotaAleatorio].ataques
     secuenciaAtaque()
@@ -283,7 +283,7 @@ function indexAmbosOponentes(jugador, enemigo) {
     indexAtaqueEnemigo = ataqueEnemigo[enemigo]
 }
 
-function combate() {  
+function combate() {
 
     for (let index = 0; index < ataqueJugador.length; index++) {
         if(ataqueJugador[index] === ataqueEnemigo[index]) {
@@ -339,14 +339,14 @@ function crearMensaje(resultado) {
 
 function crearMensajeFinal(resultadoFinal) {
         sectionMensajes.innerHTML = resultadoFinal
-       
+
         sectionReiniciar.style.display = 'block'
     }
 
 function reiniciarJuego() {
     location.reload()
 }
-    
+
 function aleatorio (min, max) {
     return Math.floor (Math.random() * (max - min + 1) + min)
 }
@@ -364,7 +364,7 @@ function pintarCanvas() {
     )
     mascotaJugadorObjeto.pintarMateria()
     enviarPosicion(mascotaJugadorObjeto.x, mascotaJugadorObjeto.y)
-    
+
     materiasEnemigos.forEach(function (materia) {
         if (materia != undefined) {
             materia.pintarMateria()
@@ -451,7 +451,7 @@ function sePresionoUnaTecla(event) {
 function iniciarMapa() {
     mascotaJugadorObjeto = obtenerObjetoMascota(mascotaJugador)
     console.log(mascotaJugadorObjeto, mascotaJugador);
-    intervalo = setInterval(pintarCanvas, 50)  
+    intervalo = setInterval(pintarCanvas, 50)
 
     window.addEventListener('keydown', sePresionoUnaTecla)
     window.addEventListener('keyup', detenerMovimiento)
@@ -461,7 +461,7 @@ function obtenerObjetoMascota() {
         if (mascotaJugador === materias[i].nombre) {
             return materias[i]
         }
-        
+
     }
 }
 function revisarColision(enemigo) {
@@ -470,13 +470,13 @@ function revisarColision(enemigo) {
     const derechaEnemigo = enemigo.x +enemigo.ancho
     const izquierdaEnemigo = enemigo.x
 
-    const arribaMascota = 
+    const arribaMascota =
         mascotaJugadorObjeto.y
-    const abajoMascota = 
+    const abajoMascota =
         mascotaJugadorObjeto.y + mascotaJugadorObjeto.alto
-    const derechaMascota = 
+    const derechaMascota =
         mascotaJugadorObjeto.x + mascotaJugadorObjeto.ancho
-    const izquierdaMascota = 
+    const izquierdaMascota =
         mascotaJugadorObjeto.x
 
     if(

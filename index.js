@@ -35,7 +35,7 @@ app.post("/materia/:jugadorId", (req, res) => {
     const jugadorId = req.params.jugadorId || ""
     const nombre = req.body.materia || ""
     const materia = new Materia(nombre)
-    
+
     const jugadorIndex = jugadores.findIndex((jugador) => jugadorId === jugador.id)
     if (jugadorIndex >= 0) {
         jugadores[jugadorIndex].asignarMateria(materia)
