@@ -366,7 +366,9 @@ function pintarCanvas() {
     enviarPosicion(mascotaJugadorObjeto.x, mascotaJugadorObjeto.y)
     
     materiasEnemigos.forEach(function (materia) {
-        materia.pintarMateria()
+        if (materia != undefined) {
+            materia.pintarMateria()
+        }
     })
     if (mascotaJugadorObjeto.velocidadX !== 0 || mascotaJugadorObjeto.velocidadY !== 0){
         revisarColision(hipodogeEnemigo)
