@@ -188,634 +188,273 @@ Falso			NOT		Verdadero
 	NOT > !
 Clase - 28
 Se realizaron la resta de vidas según el ataque que hiciera cada mascota, como del jugador y del enemigo
-
-
-
 Clase - 29
-
 Agregamos mensaje para saber si perdimos o ganamos la pelea, añadiendo la lógica, programando un mensaje final con otra funcion.
-
-
 Clase - 30
-
 (location.reload ()) = recarga la pagina html 
-
 Anclamos el reinicio de la página al botón
-
 Atributo (disabled) = cancela la opción de pulsar un botón
-
 Deshabilitamos los botones de ataque usando el atributo 'disabled', aplicandolo desde JS
-
-
-
-
-
-
 Clase - 31
-
 Dividiremos las secciones para que se muestre y oculten, segú como avance el juego.
-
 Propiedad (style.display) = Modificar los estilo en html desde JS
-
 Colocamos el estilo none para que no se muestre y luego block cuando queremos que esté
-
 Clase - 32
-
 CSS trabaja de la mano con HTML, se crea un vinculo entre el archivo de css y html, este vinculo es conocido como "SELECTOR"  
-
 Tipos de Selectores;
-
 	* Tipo = Es el mismo nombre de la etiqueta que se encuentra en html
 	* Clase = Este atritbuto sirve para poder seleccionar diferentes etiquetas, sin importar su diferencia y darles el mismo estilo
 	* id = Este selector funciona igual que el de clase, pero no se usa tan frecuente.
-
  Para poder funcionar el selector que escojamos, debemos usar las llaves = '{ - }' para determinar los estilos que estos ocuparán.
-
 	* Propiedades = Caracteristicas que le podemos dar a esos elementos de html (color, tamaño)
 	* Valores = Corresponde a cada una de esas caracteristicas 
-
-	
 			>	Propiedad =  Rojo   		Caracteristica = Color
 			> 	Propiedad = 10 px			Caracteristica = Tamaño
-
 * Cuando usamos el selector de tipo Clase, lo debemos llamar en la hoja de estilos por el nombre de la clase que le hayamos puesto y le sumamos un punto '.' antes de la palabra, todo pegado
-
 Si llamamos dos selectores a una misma etiqueta, no deberían tener un mismo nombre.
-
 * Cuando usamos el selector de tipo Id, lo debemos llamar en la hoja de estilos por el nombre de que le hayamos puesto y le sumamon un númeral '#' antes de la palabra, todo pegado.
-
-
 Las propiedades y valores, en su uso están escritas en inglés
-
-
 		* (cssreference.io) = página que podremos ver los atributos que podemos encontrar y usar en CSS
-
 		* (htmlcolorcodes.com) = página web que sirve para ver todos los códigos de color que podremos usar
-
-
-
-
-
 Clase - 33
-
 Tipos de visualización/ tipos de display = 
-
 	* inline		=	Solo ocupa una parte de la pantalla
 	* block		=	Ocupan toda la pantalla de izquierda a derecha
 	*inline-block	=
-
-
 Clase - 34
-
 	flexbox = atributo para alinear elementos y acomodarlos en la web
 	* Podemos ubicar elementos en la web como queramos
-
 Contenedores > Elementos
-
 Guía para el uso de CSS - flexbox = (css-tricks.com)
-
 valores y caracteristicas usados=
 						(display = flex)
 						(flex-direction = column)
 						(justify-content = center)
 						(align-items = center)
-
-
-
-
 Clase - 35
-
 El modelo de caja nos permite editar, diseñar y asignar el contenido dentro y fuera de ella
-
 	> Margin
 		> Border 
 			> Padding
 				> Content
-
 * El content se verá afectado si añadimos un padding y un border, el padding aumentará el tamaño de nuestra caja
- 
+
 	(box-sizing = border-box) == hace que el content no se vea afectado por el padding que usemos
-
 Cuando usamos el margin no afecta nuestra caja y su contenido, sino su exterior
-
 El tamaño de nuestro conten, se ve afectado el tamaño, al sumarse el tamaño del padding y el border
-
-
-
 Clase - 36
-
 Herramienta para el diseño Web = 
-
 *Pinterest
 	Busco de ideas de diseño, ilustración web
-
 *colorhunt.co
 	Diseño y paleta de colores para css
-
 *google fonts
 	Fuentes de cualquier estilo para nuestr página
-
-
-
 Clase - 37
-
 Se añadieron estilos al botón y se vió las diferentes tipos de margin = top, right, left, bottom 
-
-
-
 Clase - 38
-
 Hacer uso de una maquetación de nuestra web a lápiz, planificando de forma ordenada y bien hecha todos los elementos, agrupandolos y dando así una mejor inmersión para el usuario que esté en nuestra página
-
-
-
 Clase - 39
-
 Se recomienda estilizar y diseñar en css, desde el mas grande al más pequeño, en el orden que se encuentren dentro de cada contenedor
-
-
 Layout = La parte primordial de nuestra página. 
-
 Los estilos que se aplican en línea con el HTML son de más importancia que los de CSS
-
-
-
-
-
 Clase - 40
-
 *se me descuadró el JS * 
-
-*se pudo solucionar el error*
-
+*se pudo solucionar el error *
 Se añadió estilos a la caja de resultados del combate y el boton de reinicio de juego
-
-
-
-
 Clase - 41
-
 (grid - rejillas)
-
-
 css-tricks.com > Grid
 cssgridgarden.com > Juego interactivo para el aprendizaje de la herramienta Grid
 flexboxfroggy.com > Juego interactivo para el manejo de la herramiento Flexbox
-
-
-
-
 Clase - 42
-
 @media = funcionamiento para el desarrollo de nuestra página web desde cualquier dispositivo
-
-
-
-
 Clase - 43
-
 Pseudo-clases = Nos sirve para la interacción que tenga el usuario con nuestra página web
-
 	*hover: 	Sirve para agregar un estilo para cuando pasamos por encima el cursor
 	*active:	cuando se pulsa el botón, se queda activa la función 
 	*checked:	Esta como su nombre lo dice, chequea el input seleccionado
-
 podemos fusionar dos elementos, ejemplo:
 							input:checked + label {
 									backgroung-color: red;
 								}
 esta función hará que la selección realizada no se haga solo en el input, sino también con el label
-
-
 Clase - 44
-
 Realizamos un chequeo de toda la estructura de nuestro código, verificando y viendo que puntos pueden ser optimizados y mejorados, para un mejor desarrollo y para posteriores cambios o adaptaciones
-
 	* Se recomienda linkear el Js en la zona inferior de la estructura de nuestro html, para no generar bloqueos, 
 	a la hora de carga de nuestra página, ubicado antes de cerrar el body
-
 Esto nos asegura poder ver nuestra página y después obtener la interacción que queremos, mejorando así el funcionamiento de nuestra página.
-
-
-
-
-
-
 Clase - 45
-
 Organizamos nuestro javascript, sacando de las funciones las declaraciones, para mejorar el flujo.
 Así mismo, al hacer esto, podemos notar que estamos repitiando algunas funciones, por lo que eliminamos estas que se repiten, ya que afectan el funcionamiento de nuestr página estando por fuera de las declaraciones.
-
-
 Hay que revisar que cuando se retire una función de una declaración esta afecte directamente el html y no esté generando algo o creando un elemento nuevo.
-
 Variables Let = son todas aquellas que su valor puede variar = un contador
 Variables Const = Estas son las variables que son constantes y su valor siempre es el mismo = el titulo de la página
-
-
 DRY = (Don't Repeat Yourself)
-
-
-
-
-
 Clase - 46
-
 Clases y Objetos = Uno depende y existe por el otro.
-
-
 		* Planos de una casa 	= Clase
 		* Casa 			= Objetos
-
-
-
-
 Clase - 47
-
 	*	Class = Para crear una clase en JS, es primordial que la palabra sea en mayúscula
 	*	Constructor = Es una palabra reservada que sirve para "construir" (dentro de esta van las propiedades 			que lleven los objetos) [cosas especificas del objeto]
 	*   	This = Esto mismo, la propiedad del objeto es igual a (se agrega un '.' y seguido el nombre de la 				propiedad)
 	*	New = hace referencia a un nuevo objeto		(let (nombre) = new)
 	*	console.log = Permite hacer mensajes en el navegador para ver cosas que nos interesen en el código
-	
-
-
-
-
 Clase - 48
-
 Arreglos = tipo de variable para agrupar una cantidad de variables 
-
-
 Clase - 49
-
 Objetos instancia = se construyen utilizando una clase  
 Objetos literario = se construyen desde cero, para guardar información
-
-
 Clase - 50
-
 Manipular el DOM con iteradores
-
 Metodo: forEach = Por cada uno de nuestros arreglos, haz algo
-
 Se hicieron modificaciones, cambiando nuestro HTML de ser estática a dinámica, mejorando el flujo de respuesta en el navegador, optimizando funciones
-
-
-
 Clase - 51 
-
 Declaración lenta de variables
-
 Se optimiza desde JS generando los elementos de HTML y luego sus debidas acciones de cada elemento.
-
 Debemos tener en cuenta que las etiquetas sean iguales que los valores asignados, incluso si hay o no una mayuscula
-
-
-
-
-
 Clase - 52
-
-
 (typeof) = nos ayuda a ver que tipo de elemento es
-
 Realizamos y ajustamos fuentes de verdad para la selección de mascota para el jugador, llamando la variable por id y no por un texto. Para cuando necesitemos insertar más mascotas, no sea insertando nombre por nombre de cada mascota.
-
-
 *Una sola fuente de verdad = Una variable que se va utilizar repetidamente
-
-
-
-
-
 Clase - 53
-
 Esta vez optimizamos la elección de la mascota enemigo, cambiando la elección de un numero segun la variable, (0, 'nombre de la función'.lenght -1) Empieza desde cero, agregamos la longitud que tenga la variable y un menos uno, para que se ajuste a la misma longitud
-
 Ahora solo tenemos una fuente de verdad y no depende nuestro JS de números para elegir entre 0 a 2. optimizando el flujo del código
-
-
-
-
-
 Clase - 54 
-
 Creamos una función de loop, para cada vez que se elige un ataque
-
-
-
 Clas - 55
-
 Renderizamos los 5 ataques por mascota, generando sus botones. Ahora tenemos que asignar el ataque a los dos botones adicionales
-
-
-
-
 Clase - 56
-
 Eventos de click dinámicos
-
 Agregaremos que por cada boton que se cree se le genere automaticamente su función
-
-
 (querySelectorAll) = Seleccionar todos los elementos que tengan ese algo que necesitamos, por lo general seria una 'class'
-
-
-
-
-
 Clase - 57
-
 Secuencia de ataques del enemigo
-
 Optimizamos la elección de ataques del enemigo, para mejorar el flujo del código, mejorando errores encontrados anteriormente
-
-
 Clase - 58
-
 Iniciando el combate
-
 Aplicamos funciones en el manejo del combate, para seleccionar apartadamente nuestro ataque y a la vez la del enemigo, agrupando ambos ataques.
-
-
 Clase - 59
-
 Resolviendo el reto de condicionales
-
-
 Clase - 60
-
 Optimizando en frontend del juego
-
-
 Clase - 61
-
 Etiqueta <canvas> Nos dibuja un espacio rectangular dentro de nuestra pagina para poder dibujar sobre ella.
-
 Este rectangulo funciona bajo un plano cartesiano, sobre el eje x y y
-
 Cada punto que nos movamos sobre el plano cartesiano es un pixel
-
-
 En esta clase, creamos la sección de canvas, creamos un recuadro para designar el mapa y añadimos un lienzo cuadrado para diseñar la cara de uno de las mascotas.
-
 Cambiamos el lienzo que habiamos generado para convertirlo en la imagen de la mascota asignada
-
-
-
 Clase - 62
-
 En esta clase aprenderemos a movernos a traves del recuadro que hemos hecho con canvas
-
 Creamos las funciones y variables necesarias para mover uno de nuestras mascotas através de la pantalla, haciendo solo uso del eje x
-
 Usamos el alto y ancho del recuadro para asignarlo como fuente de movimiento para el personaje.
-
-
 Clase - 63
-
 Hicimos que nuestro personaje se mueva sin tener que estar pulsando click cada vez que queramos, sino que podemos tener oprimido el click y este se moverá. Hicimos uso del metodo "onmouseup" y "onmousedown"
-
 También hicimos uso del método "setInterval" para definir el tiempo de respuesta del Objeto según cuanto tengamos oprimido el click sobre el boton para que este se mueva.
-
-
 Clase - 64
-
 En esta clase agregaremos la función de addEvenListener, para hacer uso de los botones y poder manejar la mascota con estos.
-
 Hicimos uso de "switch case", para poder ajustar el uso de las teclas; arriba, abajo, izquierda y derecha del mouse y poder navegar en la interfaz con el uso del teclado.
-
-
 Clase - 65
-
 En esta clase pondremos un fondo
-
-
 Colocamos el fondo, adaptando así mismo el alto y ancho de nuestro canvas.
-
 Ajustamos la configuración para poder elegir cualquier personaje y que este se cargue correctamente en el mapa de canvas. 
-
 Arreglamos el error de que estabamos llamando la variable y después esta misma se cambiaba de nombre en otra función, posicionamos la variable al final de la función
-
-
 Clase - 66
-
 Agregaremos en el código funciones para añadir nuestros enemigos
-
 Metodos de tipo "Clase"
-
 Añadimos los enemigos en nuestro código, usando las mismas bases de nuestras mascotas. 
 Además hicimos que estos se generaran en el mapa de canvas.
-
-
 Clase - 67
-
 Colisiones e interacción 
-
 Para que haya una colisión de objetos, debemos observar nuestro canvas como un rejilla y ver entre dos objetos que todas las opciones sean 'falsas' en su interacción (mayor - menor) en el plano cartesiano. de haber al menos una verdadera, esta no está colisionando con la otra.Deben ser todas falsas 
-
 (!==0) esta expresión es para indicar que algo es diferente que 0
-
 Cuando colisionamos con un enemigo, nuestra página lanzará un alert. 
-
 Asignamos esta colision mediante constantes, donde por cada enemigo que colisione nuestra mascota, estas dos interactuen.
-
-
-
-
 Clase - 68
-
 Ya hicimos la colision entre los objetos, ahora que colisionemos con un enemigo mostraremos la interfaz de batalla con el enemigo que colisionemos y ocultaremos la interfaz del mapa.
-
 Ya podemos seleccionar nuestra mascota, recorrer el mapa, colisionar con un enemigo y pelear con el.
-
-
-
-
-
 Clase - 69
-
-
 Mapa Responsive
-
 Adaptaremos el ancho del mapa, en la pantalla.
-
 Ya adaptamos el ancho del mapa, dependiendo del tamaño de la pantalla que lo esté abriendo.
 Eliminamos el borde y ajustamos el tamaño de nuestras mascotas
-
 Limpiamos nuestro código, eliminando datos innecesarios que teniamos de posición en nuestra mascota y en la del enemigo.
-
-
-
 Clase - 70
-
 Configuramos los botones de movimiento en el mapa, donde los hicimos como si fueran de consola, para una mejor interacción.
-
-
 Utilizamos un media viewport y lo insertamos en el meta de nuestro html, para hacer que nuestra paágina active los responsive en diferentes dispositivos.
-
-
-
-
 Clase - 71
-
-
 ¿Qué es Backend?
-
 Platzi(servidor - respuesta)  ->  Alguien tomando el curso(cliente -  petición)
-
 (Protocolo) Https = Protocolo de transferencia de hipertexto 
-
 API = aplication programming interface
-
-
-
 Clase - 72
-
 Hicimos la intalación de node.js, que nos servirá para el uso y manejo de datos de nuestra página web
-
 (nodejs.org)
-
 Para probar la efectividad de la descarga, abrimos una nueva terminal y ejecutamos el código (node -v) nos debe aparecer la versión instalada del programa, como también (npm)
-
 Si nos sale algún error, probamos con cerrar y volver a abrir el VSC
-
-
-
 Clase - 73
-
 Terminal de comandos = Es una herramienta para el uso de programas sin interfaz gráfica, solo por texto.
-
 Librería = Código ya hecho que podemos usar libremente
-
 (ls) = lista los archivos de la carpeta donde estamos ubicados
 (cd) = cambiar directorio
 (cd ..) = ir atrás
 (cd + nombre de carpeta) = entramos a la carpeta nombrada
 (npm init) = creación de proyecto
-
-
 Imprimimos nuestro primer "hola mundo", en nuestra terminal haciendo uso del archivo js
-
-
-
-
 Clase - 74
-
 Express js = Libreria para el desarrollo BackEnd
-
 -importamos express,js
 	creamos una aplicación con express js
 		le decimos a express js cuando la url raíz reciba una petición responda "hola"
 			le pedimos que escuche en el puerto (8080 - 5500) las peticiones del cliente
-
 Para informarnos más sobre el uso de 'express js' lo podemos hacer desde "expressjs.com"
-
-
-
-
-
 Clase - 75
-
 HTTP, localhost, servidores y puertos
-
 (URI = Uniform Resource Identifier) = la forma en la que podemos identificarnos en cualquier sitio web
-
 	URL(uniform resource locator) + URN(uniform resource name)
-
 	Partes de una URI = esquema(https:) + dominio(platzi.com) + puerto(44) + ruta(search) + cadena de busqueda(search=js) + nombre(title)
-
 					|			URL						   | URN |
 		} 			(https://platzi.com:44/search?search=js#title)
-
-
 	ESQUEMA: 				que forma tendrán los mensajes
 	DOMINIO/AUTORIDAD:		
 	PUERTO:					es el numero por el medio que le indicamos a la pc a que medio nos queremos comunicar
 	RECURSO/RUTA:			
 	CADENA DE BUSQUEDA:		
 	NOMBRE:					esta lleva el # para separarla la urn de la url
-
 LOCALHOST: nuestro pc como servidor
-
-
 Verbos HTTP
 		GET 	= 	Solicitar recursos
 		POSt	=	Enviar datos
-
-
-
-
 Clase - 76
-
 Realizamos una función que por cada jugador que ingrese nuestro comando, este generara un código aleatorio designado para este.
-
 Agregamos esta función en nuestro JS, para que se llame la función y se active cada vez que alguien entre al juego
-
 (fetch) = Función para realizar llamadas hacia otros servicios por medio de https y que tipo de petición
-
 Petición asincrona = No sabemos cuando vamos a obtener la respuesta
-
 Solucionamos un error de tipo de acceso por desconocimiento de la fuente del link, para permitir que nuestra página nos genere la ID, por cada vez que entremos. Con esto conectamos el FrontEnd con el BackEnd con el uso de un servidor
-
-
-
-
-
 clase - 77
-
 JSON = JavaScript Object Notation
-
 	{"clave":"valor"}
-
 	clave = nombre de una variable
 	valor = dato/cade de texto, numero
-
 		{
 			Nombre: "Diana",
 			Edad: 27
 		}
-
-
-
 	Jugador > {id} > MAteria
-
-
 Instalamos una libreria para el libre acceso
 	Insertamos en la terminal el código = npm install cors
-
-
 Hicimos que el servidor nos muestre que tipo de mascota eligió el jugador además de mostrar su id.
-
-
-
 Clase - 78
-
-
 Transmisión de coordenadas
-
 Agregamos a nuestro juego la lectura de coordenadas en el servidor, mediante el codigo y obtención de datos con JSON
-
 Hacemos uso del archivo materia.js y index.js, trabajando en conjunto para hacer esto posible.
-
-
-
-
 Clase - 79
-
 Mascotas dinámicas en el mapa
-
 En esta clase hicimos que las mascotas seleccionadas, por diferentes usuarios a la vez dentro de nuestro juego, se aparezcan dentro del mismo mapa. 
-
 Arreglamos las funciones de ataques, haciendo que esta funcione de una manera más optima. 
-
-
-
 Clase - 80
-
 Optimizaremos la latencia de carga que tiene el jugador enemigo dentro del mapa, para evitar el parpadeo dentro de nuestra pantalla. 
-
 (map) metodo con una similitud al metodo (forEach), con la diferencia que esta no solo ejecuta, sino que retorna un valor generando una lista
 
 
