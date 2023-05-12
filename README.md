@@ -462,3 +462,5 @@ Batalla entre jugadores
 Activamos la colisión con la mascota del enemigo online, generando así la batalla entre estos dos.
 En esta clase, realizamos la asignación de ID por parte de la otra mascota del otro jugador online.
 Clase - 82
+Consumiendo la API de ataques del enemigo.
+Finalmente logramos que los ataques se sincronicen y aparezcan mis ataques con los del enemigo junto con el resultado final
