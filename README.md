@@ -458,7 +458,7 @@ Optimizaremos la latencia de carga que tiene el jugador enemigo dentro del mapa,
 (map) metodo con una similitud al metodo (forEach), con la diferencia que esta no solo ejecuta, sino que retorna un valor generando una lista.
 Ya podemos interactuar con de manera online con los otros jugadores, viendo sus movimientos y la mascota elegida
 Clase - 81
-
-
-
-
+Batalla entre jugadores
+Activamos la colisión con la mascota del enemigo online, generando así la batalla entre estos dos.
+En esta clase, realizamos la asignación de ID por parte de la otra mascota del otro jugador online.
+Clase - 82

@@ -25,6 +25,7 @@ const sectionVerMapa = document.getElementById('ver-mapa')
 const mapa = document.getElementById('mapa')
 
 let jugadorId = null
+let enemigoId = null
 let materias = []
 let materiasEnemigos = []
 let ataqueJugador = []
@@ -252,7 +253,7 @@ function secuenciaAtaque() {
     })
 }
 function enviarAtaques() {
-    fetch(`/materia/${jugadorId}/ataques` {
+    fetch(`http://localhost:5500/materia/${jugadorId}/ataques`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -406,11 +407,11 @@ function enviarPosicion(x, y) {
                             let materiasEnemigos = null
                             const materiaNombre = enemigo.materia.nombre || ""
                                 if (materiaNombre === "Hipodoge") {
-                                    materiasEnemigos = new Materia('Hipodoge', 'assets/hipodoge.png', 5,'assets/hipodoge.png')
+                                    materiasEnemigos = new Materia('Hipodoge', 'assets/hipodoge.png', 5,'assets/hipodoge.png', enemigo.id)
                                 } else if (materiaNombre === "Capipepo") {
-                                    materiasEnemigos = new Materia('Capipepo', 'assets/capipepo.png', 5, 'assets/capipepo.png')
+                                    materiasEnemigos = new Materia('Capipepo', 'assets/capipepo.png', 5, 'assets/capipepo.png', enemigo.id)
                                 } else if (materiaNombre === "Ratigueya") {
-                                    materiasEnemigos = new Materia('Ratigueya', 'assets/ratigueta.png', 5, 'assets/ratigueta.png')
+                                    materiasEnemigos = new Materia('Ratigueya', 'assets/ratigueta.png', 5, 'assets/ratigueta.png', enemigo.id)
                                 }
 
                             materiasEnemigos.x = enemigo.x
@@ -496,6 +497,7 @@ function revisarColision(enemigo) {
     }
     detenerMovimiento()
     clearInterval(intervalo)
+    enemigoId = enemigo.id
     sectionSeleccionarAtaque.style.display = 'flex'
     sectionVerMapa.style.display = 'none'
     seleccionarMascotaEnemigo(enemigo)
