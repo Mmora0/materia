@@ -245,7 +245,20 @@ function secuenciaAtaque() {
                 boton.style.background = '#9f3d34'
                 boton.disabled = true
             }
-            ataqueAleatorioEnemigo()
+            if (ataqueJugador.length === 5) {
+                enviarAtaques()
+            }
+        })
+    })
+}
+function enviarAtaques() {
+    fetch(`/materia/${jugadorId}/ataques` {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            ataques: ataqueJugador
         })
     })
 }
@@ -368,13 +381,9 @@ function pintarCanvas() {
     materiasEnemigos.forEach(function (materia) {
         if (materia != undefined) {
             materia.pintarMateria()
+            revisarColision(materia)
         }
     })
-    if (mascotaJugadorObjeto.velocidadX !== 0 || mascotaJugadorObjeto.velocidadY !== 0){
-        revisarColision(hipodogeEnemigo)
-        revisarColision(capipepoEnemigo)
-        revisarColision(ratigueyaEnemigo)
-    }
 }
 
 function enviarPosicion(x, y) {

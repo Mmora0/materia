@@ -15,6 +15,9 @@ class Jugador {
         this.x = x
         this.y = y
     }
+    asignarAtaques(ataques) {
+        this.ataques = ataques
+    }
 }
 
 class Materia {
@@ -60,6 +63,17 @@ app.post("/materia/:jugadorId/posicion", (req, res) => {
     res.send({
         enemigos
     })
+})
+
+app.post("/materia/:jugadorId/ataques", (req, res) => {
+    const jugadorId = req.params.jugadorId || ""
+    const ataques = req.body.ataques || []
+
+    const jugadorIndex = jugadores.findIndex((jugador) => jugadorId === jugador.id)
+    if (jugadorIndex >= 0) {
+        jugadores[jugadorIndex].asignarAtaques(ataques)
+    }
+    res.end()
 })
 
 app.listen(5500, () => {
