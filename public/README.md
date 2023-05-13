@@ -472,3 +472,16 @@ Ahora haremos que podamos abrir nuestra página desde cualquier dispositivo
 Procedemos a crear una carpeta y dentro de esta metemos los archivos estaticos, que no necesitan una función fuera del frontEnd. A esta carpeta le tenemos que asignar como Estatica, desde nuestro index.js
 (hostname) = nombre de nuestra pc, ingresado en la terminal
 (ipconfig) = Nos dará código, pero buscaremos la IPv4 
+Lógramos hacer que podamos jugar através de computador y celular al mismo tiempo, compartiendo la misma red wifi. cambiamos el localhost, por el numero de ip del host.
+Ahora podremos jugar con diferentes enemigos al mismo tiempo.
+Clase - 84
+Entrega final
+¿?
+Uso de Git y Github, trabajo remoto en el mismo proyecto sin necesidad de estar presencialmente todo el equipo.
+* Industria de los Videojuegos
+* Arte digital interactivo
+* Marketing digital
+* Habilidades blandas
+* Estrategias de aprender inglés
+* Creación de startups
+* 

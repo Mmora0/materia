@@ -153,7 +153,7 @@ function iniciarJuego() {
 }
 
 function unirseAlJuego() {
-    fetch("http://localhost:5500/unirse")
+    fetch("http://192.168.1.6:5500/unirse")
     .then(function (res) {
         if (res.ok) {
             res.text()
@@ -190,7 +190,7 @@ function seleccionarMascotaJugador(){
 }
 
 function selecciorMateria(mascotaJugador) {
-    fetch(`http://localhost:5500/materia/${jugadorId}`, {
+    fetch(`http://192.168.1.6:5500/materia/${jugadorId}`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -253,7 +253,7 @@ function secuenciaAtaque() {
     })
 }
 function enviarAtaques() {
-    fetch(`http://localhost:5500/materia/${jugadorId}/ataques`, {
+    fetch(`http://192.168.1.6:5500/materia/${jugadorId}/ataques`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -266,7 +266,7 @@ function enviarAtaques() {
 }
 
 function obtenerAtaques() {
-    fetch(`http://localhost:5500/materia/${enemigoId}/ataques`)
+    fetch(`http://192.168.1.6:5500/materia/${enemigoId}/ataques`)
         .then(function (res) {
             if (res.ok) {
                 res.json()
@@ -405,7 +405,7 @@ function pintarCanvas() {
 }
 
 function enviarPosicion(x, y) {
-    fetch(`http://localhost:5500/materia/${jugadorId}/posicion`, {
+    fetch(`http://192.168.1.6:5500/materia/${jugadorId}/posicion`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
