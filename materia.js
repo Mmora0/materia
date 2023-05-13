@@ -166,9 +166,6 @@ function unirseAlJuego() {
 }
 
 function seleccionarMascotaJugador(){
-
-    sectionSeleccionarMascota.style.display = 'none'
-
     if (inputHipodoge.checked) {
         spanMascotaJugador.innerHTML = inputHipodoge.id
         mascotaJugador = inputHipodoge.id
@@ -180,7 +177,10 @@ function seleccionarMascotaJugador(){
         mascotaJugador = inputRatigueya.id
     } else{
         alert("Debes seleccionar una mascota")
+        return
     }
+
+    sectionSeleccionarMascota.style.display = 'none'
 
     selecciorMateria(mascotaJugador)
 

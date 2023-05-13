@@ -463,4 +463,12 @@ Activamos la colisión con la mascota del enemigo online, generando así la bata
 En esta clase, realizamos la asignación de ID por parte de la otra mascota del otro jugador online.
 Clase - 82
 Consumiendo la API de ataques del enemigo.
-Finalmente logramos que los ataques se sincronicen y aparezcan mis ataques con los del enemigo junto con el resultado final
+Finalmente logramos que los ataques se sincronicen y aparezcan mis ataques con los del enemigo junto con el resultado final, haciendo posible el juego en linea contra otro jugador.
+Clase - 83
+Probando el juego en varios dispositivos
+Durantes esta clase corregiremos errores y bugs encontrados en el proyecto, para la entrega final.
+Ajustamos la elección de mascota, ya que esta al no hacerse una en concreto se rompía el flujo del programa, en caso de no seleccionar una en específico, el programa no avanzará y se activará el return, que está en el JS
+Ahora haremos que podamos abrir nuestra página desde cualquier dispositivo
+Procedemos a crear una carpeta y dentro de esta metemos los archivos estaticos, que no necesitan una función fuera del frontEnd. A esta carpeta le tenemos que asignar como Estatica, desde nuestro index.js
+(hostname) = nombre de nuestra pc, ingresado en la terminal
+(ipconfig) = Nos dará código, pero buscaremos la IPv4 
